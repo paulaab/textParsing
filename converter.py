@@ -6,17 +6,19 @@ ignore = [
 ' GPS reading', '----------------------------------------', 'time utc', 'Killing', 'Done', 'Exiting']
 
 for line in gpsFile:
-    if any(name in line for name in ignore):
-        continue
-    else:
-        if 'sats' in line:
-            myGPS.append(data)
-            data = {}
+    if line.strip():
+        if any(name in line for name in ignore):
+            continue
         else:
-            temp = re.findall("[a-zA-Z]+", line)
-            field = ' '.join(temp)
-            value = re.findall(r'[-+]?\d*\.\d+|\d+', line)
-            data[field] = value
+            if 'sats' in line:
+                myGPS.append(data)
+                data = {}
+            else:
+                temp = re.findall("[a-zA-Z]+", line)
+                field = ' '.join(temp)
+                value = re.findall(r'[-+]?\d*\.\d+|\d+', line)
+                data[field] = value
+
 
 
 print(myGPS[10])
