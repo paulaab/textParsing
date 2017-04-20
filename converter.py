@@ -5,7 +5,7 @@ with open ('C:\\Users\\InnoGarage\\Desktop\\Paula\\Textfiles\\gpsTrace_runde1.tx
     myGPS = []
     mySats = []
     data = {}
-    ignore = [' GPS reading', '----------------------------------------', 'time utc', 'Killing', 'Done', 'Exiting']
+    ignore = [' GPS reading', '----------------------------------------', 'Killing', 'Done', 'Exiting']
 
     for line in gpsFile:
 
@@ -35,6 +35,15 @@ with open ('C:\\Users\\InnoGarage\\Desktop\\Paula\\Textfiles\\gpsTrace_runde1.tx
                     myGPS.append(data)
                     data = {}
                     mySats = []
+
+                elif 'time utc' in line:
+                    value = 0
+                    data['time utc'] = value
+
+
+
+
+
                 else:
                     tempfield = re.findall("[a-zA-Z]+", line)
                     field = ' '.join(tempfield)
@@ -61,3 +70,8 @@ with open ('C:\\Users\\InnoGarage\\Desktop\\Paula\\Textfiles\\gpsTrace_runde1.tx
         json.dump(jsonData,f)
 
 
+#DELETE A CHARACTER FROM A STRING
+#newstr = oldstr.replace("M", "")
+#EXTRACT SUBSTRING INSIDE STRING
+#how to extract a substring from inside a string in Python?
+#http://stackoverflow.com/questions/4666973/how-to-extract-a-substring-from-inside-a-string-in-python
