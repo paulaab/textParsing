@@ -1,9 +1,9 @@
 import re
+import json
 gpsFile = open ('C:\\Users\\InnoGarage\\Desktop\\Paula\\Textfiles\\gpsTrace_runde1.txt', 'r')
 myGPS = []
 data = {}
-ignore = [
-' GPS reading', '----------------------------------------', 'time utc', 'Killing', 'Done', 'Exiting']
+ignore = [' GPS reading', '----------------------------------------', 'time utc', 'Killing', 'Done', 'Exiting']
 
 for line in gpsFile:
     if line.strip():
@@ -14,12 +14,16 @@ for line in gpsFile:
                 myGPS.append(data)
                 data = {}
             else:
-                temp = re.findall("[a-zA-Z]+", line)
-                field = ' '.join(temp)
+                tempfield = re.findall("[a-zA-Z]+", line)
+                field = ' '.join(tempfield)
                 value = re.findall(r'[-+]?\d*\.\d+|\d+', line)
                 data[field] = value
+del myGPS[0]['']
+print(myGPS[1])
+jsonData = json.dumps(myGPS)
+#print(jsonData)
 
+with open('JSONGPSData.json','w') as f:
+    json.dump(jsonData,f)
 
-
-print(myGPS[10])
 
