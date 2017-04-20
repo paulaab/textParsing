@@ -1,29 +1,41 @@
 import re
 import json
-gpsFile = open ('C:\\Users\\InnoGarage\\Desktop\\Paula\\Textfiles\\gpsTrace_runde1.txt', 'r')
-myGPS = []
-data = {}
-ignore = [' GPS reading', '----------------------------------------', 'time utc', 'Killing', 'Done', 'Exiting']
 
-for line in gpsFile:
-    if line.strip():
-        if any(name in line for name in ignore):
-            continue
-        else:
-            if 'sats' in line:
-                myGPS.append(data)
-                data = {}
+with open ('C:\\Users\\InnoGarage\\Desktop\\Paula\\Textfiles\\gpsTrace_runde1.txt', 'r') as gpsFile:
+    myGPS = []
+    data = {}
+    ignore = [' GPS reading', '----------------------------------------', 'time utc', 'Killing', 'Done', 'Exiting']
+
+    for line in gpsFile:
+
+        if line.strip():                                            #Ignore the blank lines
+            if any(name in line for name in ignore):                #Ignore additional info
+                continue
             else:
-                tempfield = re.findall("[a-zA-Z]+", line)
-                field = ' '.join(tempfield)
-                value = re.findall(r'[-+]?\d*\.\d+|\d+', line)
-                data[field] = value
-del myGPS[0]['']
-print(myGPS[1])
-jsonData = json.dumps(myGPS)
-#print(jsonData)
+                if 'sats' in line:
+                    line.split('[')
+                    myGPS.append(data)
+                    data = {}
+                else:
+                    tempfield = re.findall("[a-zA-Z]+", line)
+                    field = ' '.join(tempfield)
+                    tempvalue = re.findall(r'[-+]?\d*\.\d+|\d+', line)
+                    value = ''.join(tempvalue).strip()
+                    try:
+                        value = float(value)
+                    except ValueError as e:
+                        print('error')
+                        #print(value)
+                        #print(line)
+                    data[field] = value
 
-with open('JSONGPSData.json','w') as f:
-    json.dump(jsonData,f)
+    del myGPS[0]['']
+    print(myGPS[0])
+    print(myGPS[1])
+
+
+    jsonData = json.dumps(myGPS)                                       #Save Python dictionary as JSON File
+    with open('JSONGPSData.json','w') as f:
+        json.dump(jsonData,f)
 
 
