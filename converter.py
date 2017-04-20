@@ -29,7 +29,7 @@ with open ('C:\\Users\\InnoGarage\\Desktop\\Paula\\Textfiles\\gpsTrace_runde1.tx
                         # print(myObject2)
                         myDict = dict((k.strip(), v.strip()) for k, v in (item.split(':') for item in myObject))
                         mySats.append(myDict)
-
+                    mySats[-1]['Used'] = mySats[-1]['Used'].replace("]", "")
                     data['sats'] = mySats
                     #adding for each data object
                     myGPS.append(data)
@@ -44,13 +44,15 @@ with open ('C:\\Users\\InnoGarage\\Desktop\\Paula\\Textfiles\\gpsTrace_runde1.tx
                     try:
                         value = float(value)
                     except ValueError as e:
-                        print('error: blank space in the value')
+                        continue
+                        #print('error: blank space in the value')
                         #print(value)
                         #print(line)
                     data[field] = value
 
     #del myGPS[0]['']
-    print(myGPS[0]['sats'])
+    print(myGPS[0])
+    print(myGPS[1])
    # print(myGPS[1])
 
 

@@ -23,6 +23,7 @@ with open('C:\\Users\\InnoGarage\\Desktop\\Paula\\Textfiles\\sats.txt', 'r') as 
                 mySats.append(myDict)
                 #data['sats'] = myDict
           #  print(myDict)
+    mySats[-1]['Used'] = mySats[-1]['Used'].replace("]","")
     print(mySats)
 
 
