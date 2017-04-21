@@ -1,11 +1,11 @@
 import re
 import json
-
-with open ('C:\\Users\\InnoGarage\\Desktop\\Paula\\Textfiles\\gpsTrace_runde1.txt', 'r') as gpsFile:
+with open ('C:\\Users\\InnoGarage\\Desktop\\Paula\\Textfiles\\Sin_primero.txt', 'r') as gpsFile:
+#with open ('C:\\Users\\InnoGarage\\Desktop\\Paula\\Textfiles\\gpsTrace_runde1.txt', 'r') as gpsFile:
     myGPS = []
     mySats = []
     data = {}
-    ignore = [' GPS reading', '----------------------------------------', 'Killing', 'Done', 'Exiting']
+    ignore = [' GPS reading', '----------------------------------------', 'Killing', 'Done', 'Exiting','nan']
 
     for line in gpsFile:
 
@@ -14,54 +14,45 @@ with open ('C:\\Users\\InnoGarage\\Desktop\\Paula\\Textfiles\\gpsTrace_runde1.tx
                 continue
             else:
                 if 'sats' in line:
-                    mystring = line.split('[')
-                    satsstring = mystring[1][:-1]
-                    satsstring = satsstring.split(',')
-                    # print(satsstring)
-                    # Differentiate each object from the array
-                    for item in satsstring:
-
-                        # Create dictionary for each one of the objects
-                        # print(myObject)
-                        myObject = re.findall('[A-Z][^A-Z]*', item)
-                        myObject = myObject[2:]
-                        myObject[0] = "PR" + myObject[0]
-                        # print(myObject2)
-                        myDict = dict((k.strip(), v.strip()) for k, v in (item.split(':') for item in myObject))
-                        mySats.append(myDict)
-                    mySats[-1]['Used'] = mySats[-1]['Used'].replace("]", "")
+                    start = line.find('[') + 1
+                    end = line.find(']', start)
+                    satsstring = line[start:end]
+                    if satsstring == '':
+                        empty = True
+                    else:
+                        empty = False
+                        satsstring = satsstring.split(',')
+                        for item in satsstring:
+                            # Create dictionary for each one of the objects
+                            item = re.findall('[A-Z][^A-Z]*', item)[2:]
+                            item[0] = "PR" + item[0]
+                            myDict = dict((k.strip(), v.strip()) for k, v in (item.split(':') for item in item))
+                            mySats.append(myDict)
                     data['sats'] = mySats
-                    #adding for each data object
-                    myGPS.append(data)
+                    # adding for each data object
+                    if not iempty:
+                        myGPS.append(data)
                     data = {}
                     mySats = []
 
+
                 elif 'time utc' in line:
-                    value = 0
-                    data['time utc'] = value
-
-
-
-
+                    times = list(map(str.strip, line[8:].split('+'))).pop(0)
+                    data['time utc'] = times
 
                 else:
-                    tempfield = re.findall("[a-zA-Z]+", line)
-                    field = ' '.join(tempfield)
-                    tempvalue = re.findall(r'[-+]?\d*\.\d+|\d+', line)
-                    value = ''.join(tempvalue).strip()
-
+                    field = ' '.join(re.findall("[a-zA-Z]+", line))
+                    value = ''.join(re.findall(r'[-+]?\d*\.\d+|\d+', line)).strip()
                     try:
                         value = float(value)
                     except ValueError as e:
                         continue
                         #print('error: blank space in the value')
-                        #print(value)
-                        #print(line)
                     data[field] = value
 
     #del myGPS[0]['']
+   # print(myGPS[0])
     print(myGPS[0])
-    print(myGPS[1])
    # print(myGPS[1])
 
 

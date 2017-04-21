@@ -6,25 +6,21 @@ with open('C:\\Users\\InnoGarage\\Desktop\\Paula\\Textfiles\\sats.txt', 'r') as 
 
     for line in satsfile:
         if 'sats' in line:
-            mystring = line.split('[')
-            satsstring = mystring[1][:-1]
-            satsstring = satsstring.split(',')
-           # print(satsstring)
-            #Differentiate each object from the array
-            for item in satsstring:
-                myObject = item
-                #Create dictionary for each one of the objects
-                #print(myObject)
-                myObject2 = re.findall('[A-Z][^A-Z]*', myObject)
-                myObject2 = myObject2[2:]
-                myObject2[0] = "PR"+myObject2[0]
-                #print(myObject2)
-                myDict = dict((k.strip(), v.strip()) for k,v in (item.split(':')for item in myObject2))
-                mySats.append(myDict)
-                #data['sats'] = myDict
-          #  print(myDict)
-    mySats[-1]['Used'] = mySats[-1]['Used'].replace("]","")
-    print(mySats)
+            start = line.find('[') + 1
+            end = line.find(']', start)
+            satsstring = line[start:end]
+            if satsstring == '':            #Check if sats string is empty
+                continue
+            else:
+                satsstring = satsstring.split(',')
+                print(satsstring)
+                for item in satsstring:
+                    #Create dictionary for each one of the objects
+                    item = re.findall('[A-Z][^A-Z]*', item)[2:] # Separate each key-value depending on the start of capital letters
+                    item[0] = "PR"+item[0] #Correction for PRN, before was just N
+                    myDict = dict((k.strip(), v.strip()) for k,v in (item.split(':')for item in item)) #Separate in each par of key-value, the key value depending on the : , then strip both values and add them to the dictionary as key/value pairs again
+                    mySats.append(myDict)
+    #print(mySats)
 
 
 

@@ -1,13 +1,19 @@
 import re
+import itertools
+import time
 with open('C:\\Users\\InnoGarage\\Desktop\\Paula\\Textfiles\\sats.txt', 'r') as f:
-    times = []
+    #times = []
     for line in f:
+
         if 'time utc' in line:
 
-            d = line.split('time utc')
+            times = list(map(str.strip,line[8:].split('+'))).pop(0)
+            print(type(times))
+            #times = list(map(str.strip, times))
 
-            for item in d:
-                #item = item.split('+')
-                item = item.strip()
-            times.append(d)
-    print(times)
+
+
+
+
+
+            #print(times)
