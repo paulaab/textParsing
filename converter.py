@@ -1,7 +1,7 @@
 import re
 import json
-#with open ('C:\\Users\\InnoGarage\\Desktop\\Paula\\Textfiles\\Sin_primero.txt', 'r') as gpsFile:
-with open ('C:\\Users\\InnoGarage\\Desktop\\Paula\\Textfiles\\gpsTrace_runde1.txt', 'r') as gpsFile:
+
+with open('C:\\Users\\InnoGarage\\Desktop\\Paula\\Textfiles\\gpsTrace_runde1.txt', 'r') as gpsFile:
     myGPS = []
     mySats = []
     data = {}
@@ -34,8 +34,6 @@ with open ('C:\\Users\\InnoGarage\\Desktop\\Paula\\Textfiles\\gpsTrace_runde1.tx
                         myGPS.append(data)
                     data = {}
                     mySats = []
-
-
                 elif 'time utc' in line:
                     times = list(map(str.strip, line[8:].split('+'))).pop(0)
                     data['time utc'] = times
@@ -47,18 +45,11 @@ with open ('C:\\Users\\InnoGarage\\Desktop\\Paula\\Textfiles\\gpsTrace_runde1.tx
                         value = float(value)
                     except ValueError as e:
                         continue
-                        #print('error: blank space in the value')
                     data[field] = value
-
-    #del myGPS[0]['']
-   # print(myGPS[0])
-    print(myGPS[0])
-   # print(myGPS[1])
-
-
+    print(myGPS)
     jsonData = json.dumps(myGPS)                                       #Save Python dictionary as JSON File
-    with open('JSONGPSData.json','w') as f:
-        json.dump(jsonData,f)
+    with open('JSONGPSData.json', 'w') as f:
+        json.dump(jsonData, f)
 
 
 #DELETE A CHARACTER FROM A STRING
