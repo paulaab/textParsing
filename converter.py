@@ -1,7 +1,7 @@
 import re
 import json
-with open ('C:\\Users\\InnoGarage\\Desktop\\Paula\\Textfiles\\Sin_primero.txt', 'r') as gpsFile:
-#with open ('C:\\Users\\InnoGarage\\Desktop\\Paula\\Textfiles\\gpsTrace_runde1.txt', 'r') as gpsFile:
+#with open ('C:\\Users\\InnoGarage\\Desktop\\Paula\\Textfiles\\Sin_primero.txt', 'r') as gpsFile:
+with open ('C:\\Users\\InnoGarage\\Desktop\\Paula\\Textfiles\\gpsTrace_runde1.txt', 'r') as gpsFile:
     myGPS = []
     mySats = []
     data = {}
@@ -30,7 +30,7 @@ with open ('C:\\Users\\InnoGarage\\Desktop\\Paula\\Textfiles\\Sin_primero.txt', 
                             mySats.append(myDict)
                     data['sats'] = mySats
                     # adding for each data object
-                    if not iempty:
+                    if not empty:
                         myGPS.append(data)
                     data = {}
                     mySats = []
