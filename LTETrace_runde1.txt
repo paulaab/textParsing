@@ -70441,7 +70441,7 @@ WCDMA:     UARFCN ThreshL ThreshH Prio PSC   RSCP  ECN0 RXLV
 
 CDMA 1x:   Chan BC Offset Phase Str
 
-CDMA HRPD: Chan BC Offset Phase Str
+CDMA HRPD: Chan BC Offset Phase Str ultimalinea
 
 >>>>>>>>>>>>>>>>>>>>>>>>
 Zeit

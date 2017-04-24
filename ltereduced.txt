@@ -39,3 +39,174 @@ WCDMA:     UARFCN ThreshL ThreshH Prio PSC   RSCP  ECN0 RXLV
 CDMA 1x:   Chan BC Offset Phase Str
 
 CDMA HRPD: Chan BC Offset Phase Str
+
+Zeit
+Sat Mar 18 12:21:30 2017
+>>>>>>>>>>>>>>>>>>>>>>>>
+LTE Pegel
+
+2017-03-18 12:21:30
+!GSTATUS: 
+Current Time:  5037		Temperature: 37
+Reset Counter: 1		Mode:        ONLINE         
+System mode:   LTE        	PS state:    Attached     
+LTE band:      B20    		LTE bw:      10 MHz  
+LTE Rx chan:   6300		LTE Tx chan: 24300
+LTE CA state:  NOT ASSIGNED
+EMM state:     Registered     	Normal Service 
+RRC state:     RRC Connected  
+IMS reg state: No Srv  		
+
+PCC RxM RSSI:  -54		RSRP (dBm):  -79
+PCC RxD RSSI:  -56		RSRP (dBm):  -80
+Tx Power:      0		TAC:         AD53 (44371)
+RSRQ (dB):     -7.0		Cell ID:     009CE001 (10280961)
+SINR (dB):     17.4
+!LTEINFO: 
+Serving:   EARFCN MCC MNC   TAC      CID Bd D U SNR PCI  RSRQ   RSRP   RSSI RXLV
+             6300 262  02 44371 009CE001 20 3 3  17 263  -7.0  -79.2  -57.1 --
+
+IntraFreq:                                          PCI  RSRQ   RSRP   RSSI RXLV
+                                                    257 -20.0 -103.4  -67.2 --
+                                                    262 -14.5  -87.1  -62.0 --
+                                                    263  -7.0  -79.2  -57.1 --
+                                                    172 -20.0 -106.3  -66.9 --
+
+InterFreq: EARFCN ThresholdLow ThresholdHi Priority PCI  RSRQ   RSRP   RSSI RXLV
+
+GSM:       ThreshL ThreshH Prio NCC ARFCN 1900 valid BSIC RSSI RXLV
+
+WCDMA:     UARFCN ThreshL ThreshH Prio PSC   RSCP  ECN0 RXLV
+
+CDMA 1x:   Chan BC Offset Phase Str
+
+CDMA HRPD: Chan BC Offset Phase Str
+
+>>>>>>>>>>>>>>>>>>>>>>>>
+Zeit
+Sat Mar 18 12:21:31 2017
+>>>>>>>>>>>>>>>>>>>>>>>>
+LTE Pegel
+
+2017-03-18 12:21:31
+!GSTATUS: 
+Current Time:  5037		Temperature: 37
+Reset Counter: 1		Mode:        ONLINE         
+System mode:   LTE        	PS state:    Attached     
+LTE band:      B20    		LTE bw:      10 MHz  
+LTE Rx chan:   6300		LTE Tx chan: 24300
+LTE CA state:  NOT ASSIGNED
+EMM state:     Registered     	Normal Service 
+RRC state:     RRC Connected  
+IMS reg state: No Srv  		
+
+PCC RxM RSSI:  -60		RSRP (dBm):  -79
+PCC RxD RSSI:  -65		RSRP (dBm):  -83
+Tx Power:      0		TAC:         AD53 (44371)
+RSRQ (dB):     -7.0		Cell ID:     009CE001 (10280961)
+SINR (dB):     17.4
+!LTEINFO: 
+Serving:   EARFCN MCC MNC   TAC      CID Bd D U SNR PCI  RSRQ   RSRP   RSSI RXLV
+             6300 262  02 44371 009CE001 20 3 3  17 263  -7.0  -79.2  -57.1 --
+
+IntraFreq:                                          PCI  RSRQ   RSRP   RSSI RXLV
+                                                    257 -20.0 -103.4  -67.2 --
+                                                    262 -14.5  -87.1  -62.0 --
+                                                    263  -7.0  -79.2  -57.1 --
+                                                    172 -20.0 -106.3  -66.9 --
+
+InterFreq: EARFCN ThresholdLow ThresholdHi Priority PCI  RSRQ   RSRP   RSSI RXLV
+
+GSM:       ThreshL ThreshH Prio NCC ARFCN 1900 valid BSIC RSSI RXLV
+
+WCDMA:     UARFCN ThreshL ThreshH Prio PSC   RSCP  ECN0 RXLV
+
+CDMA 1x:   Chan BC Offset Phase Str
+
+CDMA HRPD: Chan BC Offset Phase Str
+
+>>>>>>>>>>>>>>>>>>>>>>>>
+Zeit
+Sat Mar 18 12:21:31 2017
+>>>>>>>>>>>>>>>>>>>>>>>>
+LTE Pegel
+
+2017-03-18 12:21:31
+!GSTATUS: 
+Current Time:  5038		Temperature: 37
+Reset Counter: 1		Mode:        ONLINE         
+System mode:   LTE        	PS state:    Attached     
+LTE band:      B20    		LTE bw:      10 MHz  
+LTE Rx chan:   6300		LTE Tx chan: 4294967295
+LTE CA state:  NOT ASSIGNED
+EMM state:     Registered     	Normal Service 
+RRC state:     RRC Connected  
+IMS reg state: No Srv  		
+
+PCC RxM RSSI:  -53		RSRP (dBm):  -79
+PCC RxD RSSI:  -58		RSRP (dBm):  -82
+Tx Power:      0		TAC:         AD53 (44371)
+RSRQ (dB):     -7.0		Cell ID:     009CE001 (10280961)
+SINR (dB):     17.6
+!LTEINFO: 
+Serving:   EARFCN MCC MNC   TAC      CID Bd D U SNR PCI  RSRQ   RSRP   RSSI RXLV
+             6300 262  02 44371 009CE001 20 3 3  17 263  -7.0  -79.5  -55.9 --
+
+IntraFreq:                                          PCI  RSRQ   RSRP   RSSI RXLV
+                                                    257 -20.0 -103.4  -67.2 --
+                                                    262 -14.5  -87.1  -62.0 --
+                                                    263  -7.0  -79.5  -55.9 --
+                                                    172 -20.0 -106.3  -66.9 --
+
+InterFreq: EARFCN ThresholdLow ThresholdHi Priority PCI  RSRQ   RSRP   RSSI RXLV
+
+GSM:       ThreshL ThreshH Prio NCC ARFCN 1900 valid BSIC RSSI RXLV
+
+WCDMA:     UARFCN ThreshL ThreshH Prio PSC   RSCP  ECN0 RXLV
+
+CDMA 1x:   Chan BC Offset Phase Str
+
+CDMA HRPD: Chan BC Offset Phase Str
+
+>>>>>>>>>>>>>>>>>>>>>>>>
+Zeit
+Sat Mar 18 12:21:31 2017
+>>>>>>>>>>>>>>>>>>>>>>>>
+LTE Pegel
+
+2017-03-18 12:21:31
+!GSTATUS: 
+Current Time:  5038		Temperature: 37
+Reset Counter: 1		Mode:        ONLINE         
+System mode:   LTE        	PS state:    Attached     
+LTE band:      B20    		LTE bw:      10 MHz  
+LTE Rx chan:   6300		LTE Tx chan: 24300
+LTE CA state:  NOT ASSIGNED
+EMM state:     Registered     	Normal Service 
+RRC state:     RRC Connected  
+IMS reg state: No Srv  		
+
+PCC RxM RSSI:  -57		RSRP (dBm):  -79
+PCC RxD RSSI:  -62		RSRP (dBm):  -82
+Tx Power:      0		TAC:         AD53 (44371)
+RSRQ (dB):     -7.0		Cell ID:     009CE001 (10280961)
+SINR (dB):     17.2
+!LTEINFO: 
+Serving:   EARFCN MCC MNC   TAC      CID Bd D U SNR PCI  RSRQ   RSRP   RSSI RXLV
+             6300 262  02 44371 009CE001 20 3 3  17 263  -6.9  -78.2  -54.3 --
+
+IntraFreq:                                          PCI  RSRQ   RSRP   RSSI RXLV
+                                                    257 -20.0 -103.4  -67.2 --
+                                                    262 -14.5  -87.1  -62.0 --
+                                                    263  -6.9  -78.2  -54.3 --
+                                                    172 -20.0 -106.3  -66.9 --
+
+InterFreq: EARFCN ThresholdLow ThresholdHi Priority PCI  RSRQ   RSRP   RSSI RXLV
+
+GSM:       ThreshL ThreshH Prio NCC ARFCN 1900 valid BSIC RSSI RXLV
+
+WCDMA:     UARFCN ThreshL ThreshH Prio PSC   RSCP  ECN0 RXLV
+
+CDMA 1x:   Chan BC Offset Phase Str
+
+CDMA HRPD: Chan BC Offset Phase Str
