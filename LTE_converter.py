@@ -15,12 +15,16 @@ with open('C:\\Users\\InnoGarage\\Desktop\\Paula\\Textfiles\\LTETrace_runde1.txt
                 item = [i.strip().replace('     \t', '-') for i in line]
                 data[item[0]] = item[1]
             elif line.startswith('LTE Pegel'):
-                if not next(ltefile):
-                    time = next(ltefile)
-                    time = next(ltefile).replace(' ','T').replace('\n','')
+
+                time = next(ltefile)
+                try:
+                    time = next(ltefile).replace(' ', 'T').replace('\n', '')
                     data['time utc'] = time
-                else:
+                except ValueError as e:
                     continue
+
+
+
             elif line.startswith('Serving'):
 
                 fields = line[8:].replace('\n','').split(' ')

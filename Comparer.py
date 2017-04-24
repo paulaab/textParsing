@@ -13,5 +13,5 @@ for i in range(0,len(lte)):
     lteTime.append(lte[i]['time utc'])
 
 
-#print(gpsTime)
+print(gpsTime)
 print(lteTime)
