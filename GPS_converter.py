@@ -1,7 +1,8 @@
 import re
 import json
+with open('C:\\Users\\InnoGarage\\PycharmProjects\\textParsing\\gpsTrace_runde1.txt', 'r') as gpsFile:
+#with open('C:\\Users\\InnoGarage\\Desktop\\Paula\\Textfiles\\gpsTrace_runde1.txt', 'r') as gpsFile:
 
-with open('C:\\Users\\InnoGarage\\Desktop\\Paula\\Textfiles\\gpsTrace_runde1.txt', 'r') as gpsFile:
     myGPS = []
     mySats = []
     data = {}
@@ -40,13 +41,14 @@ with open('C:\\Users\\InnoGarage\\Desktop\\Paula\\Textfiles\\gpsTrace_runde1.txt
 
                 else:
                     field = ' '.join(re.findall("[a-zA-Z]+", line))
-                    value = ''.join(re.findall(r'[-+]?\d*\.\d+|\d+', line)).strip()
+                    value = ''.join(re.findall(r'[-+]?\d+(?:\.\d+)?', line)).strip()
+
                     try:
                         value = float(value)
                     except ValueError as e:
                         continue
                     data[field] = value
-    print(myGPS)
+    print(myGPS[0])
     jsonData = json.dumps(myGPS)                                       #Save Python dictionary as JSON File
     with open('JSONGPSData.json', 'w') as f:
         json.dump(jsonData, f)

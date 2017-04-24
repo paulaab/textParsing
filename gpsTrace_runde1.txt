@@ -1667,18 +1667,18 @@ sats         [PRN:   5  E:  23  Az: 192  Ss:  38  Used: y, PRN:  13  E:  87  Az:
 
  GPS reading
 ----------------------------------------
-latitude     51.109886267
-longitude    6.231347933
+latitude     -51.109886267
+longitude    -6.231347933
 time utc     2017-03-18T11:28:33.000Z  +  2017-03-18T11:28:33.000Z
 altitude (m) 87.4
-eps          26.38
-epx          11.501
-epv          18.4
-ept          0.005
-speed (m/s)  5.402
+eps          -26.38
+epx          -11.501
+epv          -18.4
+ept          -0.005
+speed (m/s)  -5.402
 climb        -0.2
-track        43.0
-mode         3
+track        -43.0
+mode         -3
 
 sats         [PRN:   5  E:  23  Az: 192  Ss:  36  Used: y, PRN:  13  E:  87  Az: 219  Ss:  44  Used: y, PRN:  15  E:  51  Az: 292  Ss:  47  Used: y, PRN:  20  E:  41  Az: 251  Ss:  41  Used: y, PRN:  24  E:  15  Az: 255  Ss:  36  Used: y, PRN:  28  E:  54  Az:  78  Ss:  43  Used: y, PRN:  30  E:  32  Az:  70  Ss:  43  Used: y, PRN:   8  E:   5  Az:  19  Ss:   0  Used: n, PRN:  17  E:   5  Az: 125  Ss:   0  Used: n, PRN:  18  E:  12  Az: 320  Ss:   0  Used: n, PRN:  21  E:   4  Az: 296  Ss:   0  Used: n]
 
@@ -1746,41 +1746,41 @@ ept          0.005
 speed (m/s)  0.0
 climb        0.0
 track        40.0
-mode         3
+mode         -3
 
 sats         [PRN:   5  E:  23  Az: 192  Ss:  39  Used: y, PRN:   8  E:   5  Az:  19  Ss:  33  Used: y, PRN:  13  E:  87  Az: 219  Ss:  44  Used: y, PRN:  15  E:  51  Az: 292  Ss:  49  Used: y, PRN:  17  E:   5  Az: 125  Ss:  34  Used: y, PRN:  20  E:  41  Az: 251  Ss:  42  Used: y, PRN:  21  E:   4  Az: 296  Ss:  32  Used: y, PRN:  24  E:  15  Az: 255  Ss:  37  Used: y, PRN:  28  E:  54  Az:  78  Ss:  43  Used: y, PRN:  30  E:  32  Az:  70  Ss:  42  Used: y, PRN:  18  E:  12  Az: 320  Ss:   0  Used: n]
 
  GPS reading
 ----------------------------------------
-latitude     51.11003805
-longitude    6.2315349
+latitude     -51.11003805
+longitude    -6.2315349
 time utc     2017-03-18T11:28:58.000Z  +  1489836538.0
-altitude (m) 90.7
-eps          26.38
-epx          11.501
-epv          16.1
-ept          0.005
-speed (m/s)  0.0
-climb        0.0
-track        40.02091989
-mode         3
+altitude (m) -90.7
+eps          -26.38
+epx          -11.501
+epv          -16.1
+ept          -0.005
+speed (m/s)  -0.0
+climb        -0.0
+track        -40.02091989
+mode         -3
 
 sats         [PRN:   5  E:  23  Az: 192  Ss:  38  Used: y, PRN:   8  E:   5  Az:  19  Ss:  34  Used: y, PRN:  13  E:  87  Az: 219  Ss:  43  Used: y, PRN:  15  E:  51  Az: 292  Ss:  50  Used: y, PRN:  20  E:  41  Az: 251  Ss:  42  Used: y, PRN:  21  E:   4  Az: 296  Ss:  31  Used: y, PRN:  24  E:  15  Az: 255  Ss:  38  Used: y, PRN:  28  E:  54  Az:  78  Ss:  42  Used: y, PRN:  30  E:  32  Az:  70  Ss:  43  Used: y, PRN:  18  E:  12  Az: 320  Ss:   0  Used: n]
 
  GPS reading
 ----------------------------------------
-latitude     51.11003815
-longitude    6.231534917
+latitude     -51.11003815
+longitude    -6.231534917
 time utc     2017-03-18T11:29:03.000Z  +  2017-03-18T11:29:03.000Z
-altitude (m) 90.7
-eps          26.38
-epx          11.501
-epv          16.1
-ept          0.005
-speed (m/s)  0.0
-climb        0.0
-track        40.003151995
-mode         3
+altitude (m) -90.7
+eps          -26.38
+epx          -11.501
+epv          -16.1
+ept          -0.005
+speed (m/s)  -0.0
+climb        -0.0
+track        -40.003151995
+mode         -3
 
 sats         [PRN:   5  E:  23  Az: 192  Ss:  37  Used: y, PRN:   8  E:   5  Az:  19  Ss:  34  Used: y, PRN:  13  E:  87  Az: 219  Ss:  44  Used: y, PRN:  15  E:  51  Az: 292  Ss:  50  Used: y, PRN:  17  E:   5  Az: 125  Ss:  28  Used: y, PRN:  20  E:  41  Az: 251  Ss:  43  Used: y, PRN:  21  E:   4  Az: 296  Ss:  32  Used: n, PRN:  24  E:  15  Az: 255  Ss:  37  Used: y, PRN:  28  E:  54  Az:  78  Ss:  43  Used: y, PRN:  30  E:  32  Az:  70  Ss:  43  Used: y, PRN:  18  E:  12  Az: 320  Ss:   0  Used: n]
 
