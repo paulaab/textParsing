@@ -54,13 +54,12 @@ with open('gpsTrace_runde1.txt', 'r') as gpsFile:
     keylist = myGPS.keys()
     keylist.sort()
     for key in keylist:
-        print "%s: %s" % (key, mydict[key])
+        print "%s: %s" % (key, myGPS[key])
     #od = collections.OrderedDict(sorted(myGPS.items()))
-    #print(od)
+    #print(myGPS)
     jsonData = json.dumps(myGPS)                                       #Save Python dictionary as JSON File
     with open('JSONGPSData.json', 'w') as f:
         json.dump(jsonData, f)
-
 
 #DELETE A CHARACTER FROM A STRING
 #newstr = oldstr.replace("M", "")
