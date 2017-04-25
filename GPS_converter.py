@@ -1,9 +1,9 @@
 import re
 import json
-with open('C:\\Users\\InnoGarage\\PycharmProjects\\textParsing\\gpsTrace_runde1.txt', 'r') as gpsFile:
+with open('gpsTrace_runde1.txt', 'r') as gpsFile:
 #with open('C:\\Users\\InnoGarage\\Desktop\\Paula\\Textfiles\\gpsTrace_runde1.txt', 'r') as gpsFile:
-
-    myGPS = []
+    i = 0
+    myGPS = {}
     mySats = []
     data = {}
     ignore = [' GPS reading', '----------------------------------------', 'Killing', 'Done', 'Exiting','nan']
@@ -32,7 +32,9 @@ with open('C:\\Users\\InnoGarage\\PycharmProjects\\textParsing\\gpsTrace_runde1.
                     data['sats'] = mySats
                     # adding for each data object
                     if not empty:
-                        myGPS.append(data)
+                        st = 'Pegel' + i
+                        myGPS[st] = data
+                        i =+ 1
                     data = {}
                     mySats = []
                 elif 'time utc' in line:
