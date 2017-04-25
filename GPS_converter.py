@@ -1,5 +1,6 @@
 import re
 import json
+import collections
 with open('gpsTrace_runde1.txt', 'r') as gpsFile:
 #with open('C:\\Users\\InnoGarage\\Desktop\\Paula\\Textfiles\\gpsTrace_runde1.txt', 'r') as gpsFile:
     i = 0
@@ -32,9 +33,9 @@ with open('gpsTrace_runde1.txt', 'r') as gpsFile:
                     data['sats'] = mySats
                     # adding for each data object
                     if not empty:
-                        st = 'Pegel' + i
-                        myGPS[st] = data
-                        i =+ 1
+                        #st = 'Pegel' + i
+                        myGPS[i] = data
+                        i = i + 1
                     data = {}
                     mySats = []
                 elif 'time utc' in line:
@@ -50,7 +51,9 @@ with open('gpsTrace_runde1.txt', 'r') as gpsFile:
                     except ValueError as e:
                         continue
                     data[field] = value
-    print(myGPS[0])
+                    
+    od = collections.OrderedDict(sorted(myGPS.items()))
+    print(od)
     jsonData = json.dumps(myGPS)                                       #Save Python dictionary as JSON File
     with open('JSONGPSData.json', 'w') as f:
         json.dump(jsonData, f)
