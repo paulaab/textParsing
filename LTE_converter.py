@@ -1,6 +1,6 @@
 import re
 import json
-with open('C:\\Users\\InnoGarage\\Desktop\\Paula\\Textfiles\\LTETrace_runde1.txt', 'r') as ltefile:
+with open('LTETrace_runde1.txt', 'r') as ltefile:
     ignore = {'Zeit',  '>>>>>>>>>>>>>>>>>>>>>>>>', '!GSTATUS: ','!LTEINFO:','--','2017'}
     onestring = {'EMM','RRC','IMS','SINR','InterFreq', 'LTE CA state','GSM','WCDMA','CDMA 1x'}
     data = {}
@@ -16,7 +16,7 @@ with open('C:\\Users\\InnoGarage\\Desktop\\Paula\\Textfiles\\LTETrace_runde1.txt
                 item = [i.strip().replace('     \t', '-') for i in line]
                 data[item[0]] = item[1]
             elif line.startswith('LTE Pegel'):
-                cont.append[0]
+                #cont.append[0]
                 time = next(ltefile)
                 try:
                     time = next(ltefile).replace(' ', 'T').replace('\n', '')
@@ -96,8 +96,5 @@ with open('C:\\Users\\InnoGarage\\Desktop\\Paula\\Textfiles\\LTETrace_runde1.txt
     jsonData = json.dumps(myLTE)                                       #Save Python dictionary as JSON File
     with open('JSONLTEData.json', 'w') as f:
         json.dump(jsonData, f)
-
-
-
 
 
