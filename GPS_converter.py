@@ -51,9 +51,12 @@ with open('gpsTrace_runde1.txt', 'r') as gpsFile:
                     except ValueError as e:
                         continue
                     data[field] = value
-                    
-    od = collections.OrderedDict(sorted(myGPS.items()))
-    print(od)
+    keylist = myGPS.keys()
+    keylist.sort()
+    for key in keylist:
+        print "%s: %s" % (key, mydict[key])
+    #od = collections.OrderedDict(sorted(myGPS.items()))
+    #print(od)
     jsonData = json.dumps(myGPS)                                       #Save Python dictionary as JSON File
     with open('JSONGPSData.json', 'w') as f:
         json.dump(jsonData, f)
