@@ -5,6 +5,7 @@ with open('C:\\Users\\InnoGarage\\Desktop\\Paula\\Textfiles\\LTETrace_runde1.txt
     onestring = {'EMM','RRC','IMS','SINR','InterFreq', 'LTE CA state','GSM','WCDMA','CDMA 1x'}
     data = {}
     myLTE = []
+    cont = []
 
     for line in ltefile:
         if line.strip():
@@ -15,7 +16,7 @@ with open('C:\\Users\\InnoGarage\\Desktop\\Paula\\Textfiles\\LTETrace_runde1.txt
                 item = [i.strip().replace('     \t', '-') for i in line]
                 data[item[0]] = item[1]
             elif line.startswith('LTE Pegel'):
-
+                cont.append[0]
                 time = next(ltefile)
                 try:
                     time = next(ltefile).replace(' ', 'T').replace('\n', '')
