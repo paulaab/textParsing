@@ -4,9 +4,9 @@ with open('C:\\Users\\InnoGarage\\Desktop\\Paula\\Textfiles\\LTETrace_runde1.txt
     ignore = {'Zeit',  '>>>>>>>>>>>>>>>>>>>>>>>>', '!GSTATUS: ','!LTEINFO:','--','2017'}
     onestring = {'EMM','RRC','IMS','SINR','InterFreq', 'LTE CA state','GSM','WCDMA','CDMA 1x'}
     data = {}
-    myLTE = []
+    myLTE = {}
     cont = []
-
+    a = 0
     for line in ltefile:
         if line.strip():
             if any(item in line for item in ignore):
@@ -63,7 +63,8 @@ with open('C:\\Users\\InnoGarage\\Desktop\\Paula\\Textfiles\\LTETrace_runde1.txt
 
             elif line.startswith('CDMA HRPD:'):
                 data['CMDA HRPD'] = line[10:].strip()
-                myLTE.append(data)
+                myLTE[a] = data
+                a = a + 1
                 data = {}
 
             elif 'PCC' in line:
@@ -87,7 +88,10 @@ with open('C:\\Users\\InnoGarage\\Desktop\\Paula\\Textfiles\\LTETrace_runde1.txt
                     data[field] = value
 
 
-    print(myLTE)
+    keylist = myLTE.keys()
+    keylist.sort()
+    for key in keylist:
+        print "%s: %s" % (key, myLTE[key])
 
     jsonData = json.dumps(myLTE)                                       #Save Python dictionary as JSON File
     with open('JSONLTEData.json', 'w') as f:
